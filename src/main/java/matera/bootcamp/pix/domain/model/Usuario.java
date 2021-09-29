@@ -1,30 +1,30 @@
 package matera.bootcamp.pix.domain.model;
 
-import java.math.BigDecimal;
-
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 import lombok.Data;
 
 @Data
 @Entity
-public class ContaCorrente {
+public class Usuario {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
 	@Column(nullable = false)
-	private Long agencia;
+	private String nome;
 	
 	@Column(nullable = false)
-	private Long conta;
+	private String sobrenome;
 	
-	@Column(precision = 10, scale = 2, nullable = false)
-	private BigDecimal saldo;
+	@OneToOne(optional = false)
+	private ContaCorrente contaCorrente;
 
 }
