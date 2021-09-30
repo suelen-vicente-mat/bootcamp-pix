@@ -1,4 +1,4 @@
-package matera.bootcamp.pix.rest;
+package matera.bootcamp.pix.rest.status;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
