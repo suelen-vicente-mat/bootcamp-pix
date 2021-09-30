@@ -24,7 +24,13 @@ public class Usuario {
 	@Column(nullable = false)
 	private String sobrenome;
 	
-	@OneToOne(optional = false)
+	/*
+	 * Pra nossa api de inclusao de usuario, precisamos declarar o cascase.
+	 * Esse parâmetro vai fazer com que o objeto Conta Corrente no banco de dados
+	 * seja atualizado junto com o Usuario. Como estamos informando o JSON de 
+	 * conta na api de usuario, precisamos desse parâmetro.
+	 */
+	@OneToOne(optional = false, cascade = CascadeType.ALL)
 	private ContaCorrente contaCorrente;
 
 }
