@@ -1,4 +1,4 @@
-package matera.bootcamp.pix.service;
+package matera.bootcamp.pix.service.contaCorrente;
 
 import org.springframework.stereotype.Service;
 

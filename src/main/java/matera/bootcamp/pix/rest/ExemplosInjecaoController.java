@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
 import lombok.RequiredArgsConstructor;
-import matera.bootcamp.pix.service.ContaCorrenteService;
+import matera.bootcamp.pix.service.contaCorrente.ContaCorrenteService;
 
 @RestController
 //@RequiredArgsConstructor // Usada apenas no MODO-1
