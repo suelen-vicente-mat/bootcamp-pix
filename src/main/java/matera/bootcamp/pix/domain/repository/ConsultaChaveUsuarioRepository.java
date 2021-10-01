@@ -7,10 +7,11 @@ import org.springframework.data.jpa.repository.Query;
 
 import matera.bootcamp.pix.domain.model.Chave;
 
-public interface ChaveRepository extends JpaRepository<Chave, Long>{
+public interface ConsultaChaveUsuarioRepository extends JpaRepository<Chave, Long>{
+
 	@Query("select c from Chave c " +
             "    inner join ContaCorrente cc on cc.id = c.contaCorrente.id" +
-            "    inner join Usuario u on cc.id = u.contaCorrente.id " +
+            "    join Usuario u on cc.id = u.contaCorrente.id " +
             "    where u.id = :id")
-    List<Chave> findAllByUsuarioId(Long id);
+	List<Chave> findAllByUsuarioId(Long id);
 }
