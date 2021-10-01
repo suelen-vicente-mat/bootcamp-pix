@@ -13,7 +13,8 @@ public class ConsultaContaUsuarioService {
 	private final ContaCorrenteRepository contaCorrenteRepository;
 
     public ContaCorrente consultarContaPorUsuarioId(Long id) {
-        return null;
+    	return contaCorrenteRepository.findByUsuarioId(id)
+    			.orElse(null);
     }
 
 }
